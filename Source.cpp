@@ -14,14 +14,14 @@ int main()
 	Rectangle Bounds = { OFFSET,OFFSET,SCREENWIDTH - 2*OFFSET,SCREENHEIGHT - 2*OFFSET };
 
 	InitWindow(SCREENWIDTH, SCREENHEIGHT, "Motion");
-	SetTargetFPS(144);
+	SetTargetFPS(60);
 	int ParticleNumber = 500;
 
 	std::vector<Vector2> ParticlePosition;
 	int CurrentParticleNumber = 0;
 
 	std::vector<Vector2> ParticleVelocity;
-	Vector2 InitialVelocity = { 3,3 };
+	Vector2 InitialVelocity = { 6,6 };
 
 	std::vector<bool> ParticleCharge;
 
@@ -155,8 +155,10 @@ int main()
 
 		DrawCircleLinesV(CentreOfMass, 30, BLACK);
 
-		DrawText(TextFormat("%d", (int)CentreOfMass.x-SCREENWIDTH/2), 45, 15, 30, SKYBLUE);
-		DrawText(TextFormat("%d", (int)CentreOfMass.y - SCREENHEIGHT / 2), 250, 15, 30, SKYBLUE);
+
+		DrawText("Centre of Mass", 10, 18, 20, WHITE);
+		DrawText(TextFormat("%d", (int)CentreOfMass.x-SCREENWIDTH/2), 180, 15, 30, SKYBLUE);
+		DrawText(TextFormat("%d", (int)CentreOfMass.y - SCREENHEIGHT / 2), 270, 15, 30, SKYBLUE);
 		DrawText("RANDOM PARTICLE COLLISION", SCREENWIDTH / 2 - 200, 15, 20, WHITE);
 		DrawCircle(OFFSET, SCREENHEIGHT - OFFSET / 2, ParticleRadius, YELLOW);
 		DrawText("- Positively Charged Particle",   OFFSET + ParticleRadius*1.5, SCREENHEIGHT - 2*OFFSET/3, 20, WHITE);
@@ -164,8 +166,6 @@ int main()
 		DrawText("- Negatively Charged Particle", 7 * OFFSET + ParticleRadius * 1.5, SCREENHEIGHT - 2 * OFFSET / 3, 20, WHITE);
 		EndDrawing();
 	}
-
-
 
 	CloseWindow();
 
