@@ -105,8 +105,8 @@ int main()
                 float distanceSq = dx * dx + dy * dy;
                 float minDist = 2 * ParticleRadius;
                 if (distanceSq <= minDist * minDist) {
-                    Vector2 temp = ParticleVelocity[i]*DampingCoeff;
-                    ParticleVelocity[i] = ParticleVelocity[j]*DampingCoeff;
+                    Vector2 temp = ParticleVelocity[i];
+                    ParticleVelocity[i] = ParticleVelocity[j];
                     ParticleVelocity[j] = temp;
                 }
             }
