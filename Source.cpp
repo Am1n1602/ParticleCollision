@@ -158,9 +158,14 @@ int main()
 		DrawText(TextFormat("%d", (int)CentreOfMass.x-SCREENWIDTH/2), 45, 15, 30, SKYBLUE);
 		DrawText(TextFormat("%d", (int)CentreOfMass.y - SCREENHEIGHT / 2), 250, 15, 30, SKYBLUE);
 		DrawText("RANDOM PARTICLE COLLISION", SCREENWIDTH / 2 - 200, 15, 20, WHITE);
-
+		DrawCircle(OFFSET, SCREENHEIGHT - OFFSET / 2, ParticleRadius, YELLOW);
+		DrawText("- Positively Charged Particle",   OFFSET + ParticleRadius*1.5, SCREENHEIGHT - 2*OFFSET/3, 20, WHITE);
+		DrawCircle(7*OFFSET, SCREENHEIGHT - OFFSET / 2, ParticleRadius, RED);
+		DrawText("- Negatively Charged Particle", 7 * OFFSET + ParticleRadius * 1.5, SCREENHEIGHT - 2 * OFFSET / 3, 20, WHITE);
 		EndDrawing();
 	}
+
+
 
 	CloseWindow();
 
