@@ -25,8 +25,6 @@ int main()
 
 	std::vector<bool> ParticleCharge;
 
-	float DampingCoeff = 0.99999f;
-
 	float ParticleRadius = 14.0f;
 
 	Vector2 CentreOfMass = { SCREENWIDTH/2,SCREENHEIGHT/2 };
