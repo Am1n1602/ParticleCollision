@@ -6,17 +6,23 @@ int main()
 {
 
 
-	const int SCREENWIDTH = 1280;
-	const int SCREENHEIGHT = 720;
+	 int SCREENWIDTH = 1280;
+	int SCREENHEIGHT = 720;
+
+	const float DampingCoeff = 0.999f;
+	int monitor = GetCurrentMonitor();
 
 	const float OFFSET = 60;
 
-	Rectangle Bounds = { OFFSET,OFFSET,SCREENWIDTH - 2*OFFSET,SCREENHEIGHT - 2*OFFSET };
 
 	InitWindow(SCREENWIDTH, SCREENHEIGHT, "Motion");
+	SetWindowSize(GetMonitorWidth(monitor), GetMonitorHeight(monitor));
+	SCREENWIDTH = GetMonitorWidth(monitor);
+	SCREENHEIGHT = GetMonitorHeight(monitor);
 	SetTargetFPS(60);
 	int ParticleNumber = 500;
 
+	Rectangle Bounds = { OFFSET,OFFSET,SCREENWIDTH - 2*OFFSET,SCREENHEIGHT - 2*OFFSET };
 	std::vector<Vector2> ParticlePosition;
 	int CurrentParticleNumber = 0;
 
