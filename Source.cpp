@@ -6,7 +6,7 @@ int main()
 {
 
 
-	 int SCREENWIDTH = 1280;
+	int SCREENWIDTH = 1280;
 	int SCREENHEIGHT = 720;
 
 	const float DampingCoeff = 0.999f;
