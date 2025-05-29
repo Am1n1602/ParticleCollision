@@ -16,9 +16,19 @@ int main()
 
 
 	InitWindow(SCREENWIDTH, SCREENHEIGHT, "Motion");
+
+	/* if you want full screen, just uncomment the following. 
+	 
+	
 	SetWindowSize(GetMonitorWidth(monitor), GetMonitorHeight(monitor));
 	SCREENWIDTH = GetMonitorWidth(monitor);
 	SCREENHEIGHT = GetMonitorHeight(monitor);
+	ToggleFullscreen();
+
+
+	*/
+
+
 	SetTargetFPS(60);
 	int ParticleNumber = 500;
 
